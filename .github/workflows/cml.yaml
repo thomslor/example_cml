@@ -17,5 +17,5 @@ jobs:
           cat metrics.txt >> report.md
           cml publish plot.png --md >> report.md
           echo "## GPU info" >> report.md
-          cat gpu_info.txt >> report.md
+          nvidia-smi >> report.md
           cml send-comment report.md
